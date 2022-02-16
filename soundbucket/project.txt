@@ -1,0 +1,54 @@
+* URL Map
+
+/kr - 메인
+/kr/channel - 아티스트채널 리스트
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+/kr/channel/:index/artist - 아티스트채널 정보
+/kr/channel/:index/works/:index - 아티스트채널 작품 상세 ( 감상하는 공간 )
+/kr/channel/:index/artistfeed - 아티스트 피드
+/kr/channel/:index/fanfeed - 팬 피드
+/kr/channel/:index/funding - 펀딩 관련 페이지
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+/kr/preview - 오픈예정 아티스트 페이지
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+/kr/request_artist_channel - 아티스트채널 신청
+/kr/request_artist_channel/form - 아티스트채널 신청 form
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+/kr/qna - 자주묻는질문
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+/kr/signin - 로그인
+/kr/signup - 회원가입
+/kr/signup/completed - 회원가입 완료 환영말
+/kr/request_password_reset - 패스워드 재설정 신청
+/kr/password_reset_form - 패스워드 재설정
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+/kr/mypage/profile - 계정 프로필 관리
+/kr/mypage/profile_form - 프로필 변경 ( 이름 및 휴대폰 번호 )
+/kr/mypage/artist - 아티스트 계정 관리
+/kr/mypage/artist/profile - 아티스트 계정 프로필 수정
+/kr/mypage/artist/works - 아티스트 계정 작품 목록
+/kr/mypage/artist/works/:index - 아티스트 계정 작품 상세 관리 ( 삭제 및 수정 페이지 )
+/kr/mypage/artist/works/new - 아티스트 계정 작품 생성 
+/kr/mypage/artist/members - 아티스트 멤버 보기 
+/kr/mypage/artist/members/:index - 아티스트 멤버 상세 관리 ( 삭제 및 수정 페이지 )
+/kr/mypage/my_artist - 북마크한 아티스트 및 북마크한 채널 보기
+
+* 프로젝트 구조
+
+각 웹페이지는 pages 폴더에 구성되어 있음, 각 page는 component의 조합으로 이루어져 있음, element 폴더는 button 같은
+아주 작은 요소들로 구성되어 있음, 비즈니스 로직은 모두 system 폴더에 있음. 각 폴더에 있는 styles.js에 스타일링 관련 코드가 있음
+프로젝트 root에 .env 파일이 필요함
+- .env
+REACT_APP_API_KEY=https://www.soundsbucket.com/api
+REACT_APP_IMAGE=https://www.soundsbucket.com/artist_image/
+REACT_APP_MEDIA=https://www.soundsbucket.com/media/
+
+* 프레임워크
+
+주요 프레임워크는 React, 상태관리를 위해 redux를 사용하였고 스타일링을 위해 styled-component를 사용하였음. 
+그 외의 라이브러리 및 명령어는 package.json에 있음
+
+* 실행법
+
+로컬에서 실행시 : npm install -> npm start
+빌드시 : npm run build
